@@ -49,7 +49,7 @@ function App() {
 
   return (
     <div className="bg-slate-900 text-gray-100 min-h-screen">
-      <div className="container m-auto">
+      <div className="container m-auto px-5 pt-5">
         <h1 className="text-center text-3xl">TODO App</h1>
         <AddTodoForm onAdd={addTodo}></AddTodoForm>
         <ul className="mt-5">
