@@ -20,7 +20,9 @@ function TodoItem({ todo, onDelete, onEdit, onToggle }: TodoItemProps) {
         onClick={() => onToggle(todo.id)}
       />
       <input
-        className="flex-1 bg-transparent"
+        className={`flex-1 bg-transparent ${
+          todo.completed ? "line-through" : ""
+        }`}
         value={todo.title}
         onChange={(e) => onEdit(todo.id, e.target.value)}
       ></input>
