@@ -1,13 +1,19 @@
 import React from "react";
+import { useTodoStore } from "./store/todo.store";
 
-function AddTodoForm({ onAdd }: { onAdd: (todo_text: string) => void }) {
+function AddTodoForm() {
   const [value, setValue] = React.useState<string>("");
+  const { addTodo, todos } = useTodoStore((state) => state);
 
   return (
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        onAdd(value);
+        addTodo({
+          id: todos.length + 1,
+          title: value,
+          completed: false,
+        });
         setValue("");
       }}
     >
