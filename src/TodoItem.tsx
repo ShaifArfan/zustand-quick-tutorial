@@ -1,5 +1,5 @@
 import React from "react";
-import { MdDelete, MdEdit } from "react-icons/md";
+import { MdDelete } from "react-icons/md";
 import { Todo, useTodoStore } from "./store/todo.store";
 
 interface TodoItemProps {

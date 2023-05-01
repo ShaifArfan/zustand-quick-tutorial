@@ -1,12 +1,10 @@
-import { useState } from "react";
 import AddTodoForm from "./AddTodoForm";
-import { MdDelete, MdEdit } from "react-icons/md";
 import TodoItem from "./TodoItem";
-import { Todo, useTodoStore } from "./store/todo.store";
+import { useTodoStore } from "./store/todo.store";
 import Actions from "./Actions";
 
 function App() {
-  const { todos, loadTodos, resetStore } = useTodoStore((state) => state);
+  const { todos } = useTodoStore((state) => state);
 
   return (
     <div className="bg-slate-900 text-gray-100 min-h-screen">

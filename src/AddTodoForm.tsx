@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTodoStore } from "./store/todo.store";
 
 function AddTodoForm() {
-  const [value, setValue] = React.useState<string>("");
+  const [value, setValue] = useState<string>("");
   const { addTodo, todos } = useTodoStore((state) => state);
 
   return (
