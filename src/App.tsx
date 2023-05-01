@@ -1,6 +1,5 @@
 import { useState } from "react";
 import AddTodoForm from "./AddTodoForm";
-import { MdDelete, MdEdit } from "react-icons/md";
 import TodoItem from "./TodoItem";
 
 export type Todo = {
